@@ -12,6 +12,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "mongoose": "^5.0.14",
     "mongose": "^0.0.2-security"
   }
 }

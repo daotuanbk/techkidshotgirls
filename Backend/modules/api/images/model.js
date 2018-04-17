@@ -1,6 +1,15 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const commentModel = new Schema({
+  createdBy: {
+    type: String, required: true
+  },
+  content: { type: String, required: true}
+}, {
+  timestamps: {createdAt: "createAt"}
+});
+
 const imageModel = new Schema({
   imageUrl: {
     type: String,
@@ -35,15 +44,8 @@ const imageModel = new Schema({
     default: []
   }
 }, {
-  timestamps: true
+  timestamps: {createdAt: "createAt"}
 });
 
-const commentModel = new Schema({
-  createdBy: {
-    type: String
-  }
-}, {
-  timestamps: true
-});
 
 module.exports = mongoose.model('images', imageModel);
