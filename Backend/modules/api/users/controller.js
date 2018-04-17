@@ -15,6 +15,7 @@ const getAllUser = page => new Promise ((resolve, reject) => {
   userModel.find({
     'active' : true
   })
+  .sort({createAt: -1})
   .skip((page -1) *20)
   .limit(20)
   .select("avatar username password email")
