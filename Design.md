@@ -80,3 +80,7 @@ URI: /api/users/
   - Comment
     - CreatedBy
     - Content
+
+## Authentication/Authorization
+ - Authentication: Who you are
+ - Authorization: What you can do

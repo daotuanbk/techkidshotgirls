@@ -53,29 +53,9 @@ router.put ('/:id/username', (req, res) => {
   })
 })
 
-router.put ('/:id/email', (req, res) => {
-  userController
-  .updateUserEmail(req.params.id, req.body) 
-  .then(result => res.send(result))
-  .catch(err => {
-    console.error(err);
-    res.status(500).send(err);
-  })
-})
-
 router.put ('/:id/avatar', (req, res) => {
   userController
   .updateUserAvatar(req.params.id, req.body) 
-  .then(result => res.send(result))
-  .catch(err => {
-    console.error(err);
-    res.status(500).send(err);
-  })
-})
-
-router.put ('/:id/username', (req, res) => {
-  userController
-  .updateUserName(req.params.id, req.body) 
   .then(result => res.send(result))
   .catch(err => {
     console.error(err);
@@ -93,15 +73,6 @@ router.put ('/:id/password', (req, res) => {
   })
 })
 
-router.put ('/:id/avatar', (req, res) => {
-  userController
-  .updateUserAvatar(req.params.id, req.body) 
-  .then(result => res.send(result))
-  .catch(err => {
-    console.error(err);
-    res.status(500).send(err);
-  })
-})
 
 router.put ('/:id/email', (req, res) => {
   userController
